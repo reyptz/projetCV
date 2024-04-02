@@ -19,7 +19,7 @@ jobs:
            hugo-version: "latest"
         
       - name: Build site
-        run: hugo --minify  # Mettez votre commande de construction ici
+        run: hugo --minify
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
