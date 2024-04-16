@@ -1,272 +1,227 @@
+/* Déclaration des variables CSS */
+:root {
+    --font-primary: 'Arial', sans-serif;
+    --text-color: #555;
+    --background-color: #f9f9f9;
+    --accent-color: #6e3f8f;
+    --white-color: #ffffff;
+    --light-gray-color: #888;
+    --dark-gray-color: #333;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
 /* Styles généraux */
 body {
-    font-family: 'Arial', sans-serif; /* Utilisation de la police Arial */
-    margin: 0; /* Suppression des marges par défaut */
-    padding: 0; /* Suppression des paddings par défaut */
-    color: #555; /* Couleur de texte gris */
-    background-color: #f9f9f9; /* Couleur de fond gris clair */
-  }
+    font-family: var(--font-primary);
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
   
-  /* Conteneur de l'image d'arrière-plan */
-  .background-image {
-    background-color: #6e3f8f; /* Couleur de fond violet */
-    padding: 40px 20px; /* Espacement intérieur */
-    text-align: center; /* Centrage du contenu */
-  }
-  
-  /* Styles de l'en-tête */
-  header img {
-    border-radius: 50%; /* Bordure arrondie pour l'image */
-    width: 150px; /* Largeur de l'image */
-    height: 150px; /* Hauteur de l'image */
-    border: 5px solid #ffffff; /* Bordure blanche de 5px */
-    transition: transform 0.3s ease-in-out; /* Transition de l'effet de transformation */
-  }
-  
-  /* Animation au survol de l'image de l'en-tête */
-  header img:hover {
-    transform: scale(1.05); /* Agrandissement de 5% */
-  }
-  
-  header h1 {
-    margin-top: 20px; /* Marge supérieure */
-    color: #ffffff; /* Couleur de texte blanc */
-    font-size: 28px; /* Taille de police */
-  }
-  
-  header h2 {
-    margin: 10px 0; /* Marges supérieure et inférieure */
-    color: #ffffff; /* Couleur de texte blanc */
-    font-size: 22px; /* Taille de police */
-  }
-  
-  /* Conteneur de l'en-tête */
-  .header-container {
-    display: flex; /* Affichage en flexbox */
-    justify-content: space-between; /* Répartition des éléments sur l'axe horizontal */
-    align-items: center; /* Alignement vertical */
-  }
-  
-  .header-content {
-    flex-grow: 1; /* Expansion flexible */
-  }
-  
-  /* Image de l'en-tête */
-  .header-image img {
-    border-radius: 10%; /* Bordure arrondie */
-    width: 200px; /* Largeur de l'image */
-    height: 200px; /* Hauteur de l'image */
-  }
-  
-  /* Contenu de l'en-tête */
-  .header-content {
-    flex-grow: 1; /* Expansion flexible */
-    color: #ffffff; /* Couleur de texte blanc */
-  }
-  
-  /* Styles de la section Contact */
-  .contact h6,
-  .contact p {
-    color: #ffffff; /* Couleur de texte blanc */
-  } 
-  
-  /* Styles des sections */
-  section {
-    padding: 20px; /* Espacement intérieur */
-    background-color: #ffffff; /* Couleur de fond blanche */
-    margin-bottom: 20px; /* Marge inférieure */
-    border-radius: 8px; /* Bordure arrondie */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère */
-  }
-  
-  h2 {
-    color: #6e3f8f; /* Couleur de titre violette */
-    border-bottom: 2px solid #6e3f8f; /* Bordure basse violette */
-    padding-bottom: 10px; /* Espacement sous le titre */
-    font-size: 24px; /* Taille de police */
-  }
-  
-  article h3 {
-    margin-top: 0; /* Marge supérieure */
-    color: #333; /* Couleur de titre sombre */
-    font-size: 20px; /* Taille de police */
-  }
-  
-  article h4 {
-    margin-bottom: 5px; /* Marge inférieure */
-    color: #888; /* Couleur de sous-titre gris */
-  }
-  
-  /* Styles de la section Compétences */
-  #skills {
-    text-align: center; /* Centrage du texte */
-  }
-  
-  .skills-container {
-    display: flex; /* Affichage en flexbox */
-    justify-content: space-between; /* Répartition des éléments sur l'axe horizontal */
-  }
-  
-  .skill-info {
-    flex-basis: 18%; /* Taille flexible */
-    text-align: center; /* Centrage du texte */
-  }
-  
-  .skill {
-    margin-bottom: 5px; /* Marge inférieure */
-  }
-  
-  .skill-bar {
-    background-color: #f1f1f1; /* Couleur de fond de la barre de compétence */
-    height: 10px; /* Hauteur de la barre de compétence */
-    border-radius: 5px; /* Bordure arrondie */
-    margin-bottom: 5px; /* Marge inférieure */
-  }
-  
-  .skill-level {
-    height: 10px; /* Hauteur de la barre de compétence */
-    border-radius: 5px; /* Bordure arrondie */
-  }
-  
-  /* Niveaux de compétence pour chaque compétence */
-  .skill-level-html {
-    width: 95%; /* Largeur en pourcentage */
-    background-color: #6e3f8f; /* Couleur violette */
-  }
-  
-  .skill-level-mysql {
-    width: 80%; /* Largeur en pourcentage */
-    background-color: #6e3f8f; /* Couleur violette */
-  }
-  
-  .skill-level-css {
-    width: 70%; /* Largeur en pourcentage */
-    background-color: #6e3f8f; /* Couleur violette */
-  }
-  
-  .skill-level-access {
-    width: 90%; /* Largeur en pourcentage */
-    background-color: #6e3f8f; /* Couleur violette */
-  }
-  
-  .skill-level-js {
-    width: 60%; /* Largeur en pourcentage */
-    background-color: #6e3f8f; /* Couleur violette */
-  }
-  
-  /* Styles de la section Intérêts */
-  #interests {
-    text-align: center; /* Centrage du texte */
-  }
-  
-  .interests-container {
-    display: flex; /* Affichage en flexbox */
-    justify-content: center; /* Répartition des éléments au centre */
-    align-items: center; /* Alignement vertical */
-  }
-  
-  .interest {
-    display: flex; /* Affichage en flexbox */
-    flex-direction: column; /* Orientation des éléments en colonne */
-    align-items: center; /* Alignement vertical */
-    margin-right: 20px; /* Marge à droite */
-  }
-  
-  /* Conteneur de l'icône */
-  .icon-wrapper {
-    display: flex; /* Affichage en flexbox */
-    justify-content: center; /* Répartition des éléments au centre */
-    align-items: center; /* Alignement vertical */
-    width: 80px; /* Largeur de l'icône */
-    height: 80px; /* Hauteur de l'icône */
-    background-color: #6e3f8f; /* Couleur de fond violette */
-    border-radius: 50%; /* Bordure arrondie en forme de cercle */
-  }
-  
-/* Styles des icônes */
+/* Conteneur de l'image d'arrière-plan */
+.background-image {
+    background-color: var(--accent-color);
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Styles de l'en-tête */
+header img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    border: 5px solid var(--white-color);
+    transition: transform 0.3s ease-in-out;
+}
+
+header img:hover {
+    transform: scale(1.05);
+}
+
+header h1, header h2 {
+    color: var(--white-color);
+}
+
+header h1 {
+    margin-top: 20px;
+    font-size: 28px;
+}
+
+header h2 {
+    margin: 10px 0;
+    font-size: 22px;
+}
+
+/* Conteneur de l'en-tête */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-content {
+    flex-grow: 1;
+}
+
+/* Image de l'en-tête */
+.header-image img {
+    border-radius: 10%;
+    width: 200px;
+    height: 200px;
+}
+
+/* Contenu de l'en-tête */
+.header-content {
+    flex-grow: 1;
+    color: var(--white-color);
+}
+
+/* Styles de la section Contact */
+.contact h6, .contact p {
+    color: var(--white-color);
+} 
+
+/* Styles des sections */
+section {
+    padding: 20px;
+    background-color: var(--white-color);
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+h2 {
+    color: var(--accent-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 10px;
+    font-size: 24px;
+}
+
+article h3 {
+    margin-top: 0;
+    color: var(--dark-gray-color);
+    font-size: 20px;
+}
+
+article h4 {
+    margin-bottom: 5px;
+    color: var(--light-gray-color);
+}
+
+/* Styles de la section Compétences */
+#skills {
+    text-align: center;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skill-info {
+    flex-basis: 18%;
+    text-align: center;
+}
+
+.skill-bar, .skill-level {
+    height: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.skill-bar {
+    background-color: #f1f1f1;
+}
+
+.skill-level-html, .skill-level-mysql, .skill-level-css, .skill-level-access, .skill-level-js {
+    background-color: var(--accent-color);
+}
+
+.skill-level-html { width: 95%; }
+.skill-level-mysql { width: 80%; }
+.skill-level-css { width: 70%; }
+.skill-level-access { width: 90%; }
+.skill-level-js { width: 60%; }
+
+/* Styles de la section Intérêts */
+#interests {
+    text-align: center;
+}
+
+.interests-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.interest {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+}
+
 .icon-wrapper i {
-    color: #ffffff; /* Couleur de l'icône en blanc */
-    font-size: 40px; /* Taille de l'icône */
-  }
-  
-  /* Styles du texte des intérêts */
-  .interest-text {
-    font-size: 20px; /* Taille du texte */
-  }
-  
-  /* Styles du pied de page */
-  footer {
-    text-align: center; /* Centrage du texte */
-    background-color: #6e3f8f; /* Couleur de fond violette */
-    color: #ffffff; /* Couleur de texte blanc */
-    padding: 20px 0; /* Espacement intérieur */
-  }
-  
-  /* Styles des paragraphes dans le pied de page */
-  footer p {
-    margin: 0; /* Suppression des marges */
-  }
-  
-  /* Grille d'expérience */
-  .experience-grid {
-    display: grid; /* Affichage en grille */
-    grid-template-columns: repeat(2, 1fr); /* Deux colonnes égales */
-    gap: 20px; /* Espacement entre les éléments */
-  }
-  
-  /* Éléments individuels de l'expérience */
-  .experience-item {
-    background-color: #ffffff; /* Couleur de fond blanche */
-    border-radius: 8px; /* Bordure arrondie */
-    padding: 20px; /* Espacement intérieur */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère */
-  }
-  
-  .experience-item h3 {
-    margin-top: 0; /* Suppression de la marge supérieure */
-    color: #333; /* Couleur de texte sombre */
-  }
-  
-  .experience-item h4 {
-    margin-bottom: 5px; /* Marge inférieure */
-    color: #888; /* Couleur de sous-titre gris */
-  }
-  
-  .experience-item p {
-    margin: 0; /* Suppression des marges */
-  }
-  
-  /* Grille d'éducation */
-  .education-grid {
-    display: grid; /* Affichage en grille */
-    grid-template-columns: repeat(2, 1fr); /* Deux colonnes égales */
-    gap: 20px; /* Espacement entre les éléments */
-  }
-  
-  /* Éléments individuels de l'éducation */
-  .edu-item {
-    background-color: #ffffff; /* Couleur de fond blanche */
-    border-radius: 8px; /* Bordure arrondie */
-    padding: 20px; /* Espacement intérieur */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère */
-  }
-  
-  .edu-item h3 {
-    margin-top: 0; /* Suppression de la marge supérieure */
-    color: #333; /* Couleur de texte sombre */
-  }
-  
-  .edu-item h4 {
-    margin-bottom: 5px; /* Marge inférieure */
-    color: #888; /* Couleur de sous-titre gris */
-  }
-  
-  .edu-item p {
-    margin: 0; /* Suppression des marges */
-  }
-  
-  /* Élément de contact */
-  #contact-item {
-    margin-bottom: 10px; /* Marge inférieure */
-    color: #ffffff; /* Couleur de texte blanc */
-  }
+    color: var(--white-color);
+    font-size: 40px;
+}
+
+.interest-text {
+    font-size: 20px;
+}
+
+/* Styles du pied de page */
+footer {
+    text-align: center;
+    background-color: var(--accent-color);
+    color: var(--white-color);
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Grille d'expérience et d'éducation */
+.experience-grid, .education-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.experience-item, .edu-item {
+    background-color: var(--white-color);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+.experience-item h3, .edu-item h3 {
+    margin-top: 0;
+    color: var(--dark-gray-color);
+}
+
+.experience-item h4, .edu-item h4 {
+    margin-bottom: 5px;
+    color: var(--light-gray-color);
+}
+
+.experience-item p, .edu-item p {
+    margin: 0;
+}
+
+#contact-item {
+    margin-bottom: 10px;
+    color: var(--white-color);
+}
